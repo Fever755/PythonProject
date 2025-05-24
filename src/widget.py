@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(data: str) -> str:
@@ -25,7 +25,6 @@ def mask_account_card(data: str) -> str:
         raise ValueError("Номер должен содержать только цифры.")
 
     return f"{prefix} {masked}"
-
 
 
 def get_date(date_str: str) -> str:
